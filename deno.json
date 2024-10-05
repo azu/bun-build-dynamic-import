@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "compile": "deno compile --allow-all --output=dist/deno-example ./entry.ts"
+  },
+  "imports": {
+  }
+}
