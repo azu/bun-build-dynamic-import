@@ -1,5 +1,7 @@
 # Bun and Deno compile
 
+- Issue: https://github.com/oven-sh/bun/issues/11732
+
 ## Bun
 
 ```bash
