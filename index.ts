@@ -1,3 +1,4 @@
+import "rambda";
 export const loadDynamicModule = async (packageName: string) => {
   const { head } = await import(packageName)
   console.log(head("XLL"));
