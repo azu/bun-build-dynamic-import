@@ -16,7 +16,7 @@ importMetaResolve failed error: Cannot find package "rambda" from "/$bunfs/root/
 ## Deno
 
 ```bash
-$ dneo task build
+$ deno task build
 $ rm -rf node_modules # remove node_modules
 $ ./dist/deno-example
 
