@@ -1,6 +1,12 @@
 import "rambda"; // Static import
 import("rambda");// Dynamic import
-import { importMetaResolve, loadDynamicModule } from "./index.ts";
+import { importMetaResolve, loadDynamicModule, loadDynamicModuleHard } from "./index.ts";
+
+try {
+  await loadDynamicModuleHard();
+} catch (error) {
+  console.error("loadDynamicModuleHard failed", error);
+}
 try {
   await loadDynamicModule("rambda");
 } catch (error) {
