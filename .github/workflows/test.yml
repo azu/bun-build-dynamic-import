@@ -1,0 +1,31 @@
+---
+name: test
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "**"
+jobs:
+  test:
+    timeout-minutes: 10
+    permissions:
+      contents: "read"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        run: bun install
+      - name: Build binary
+        run: bun run build
+      - name: Rm -rf node_modules
+        run: rm -rf node_modules
+      - name: Execute Binary
+        run: ./dist/example
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
