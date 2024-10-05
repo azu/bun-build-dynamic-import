@@ -20,7 +20,6 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version-file: ".bun-version"
-      - name: Install Binary Compiler
       - name: Install
         run: bun install
       - name: Build binary
