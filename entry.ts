@@ -1,4 +1,5 @@
-import "rambda";
+import "rambda"; // Static import
+import("rambda");// Dynamic import
 import { importMetaResolve, loadDynamicModule } from "./index.ts";
 try {
   await loadDynamicModule("rambda");
