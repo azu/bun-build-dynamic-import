@@ -27,7 +27,7 @@ jobs:
       - name: Rm -rf node_modules
         run: rm -rf node_modules
       - name: Execute Binary
-        run: ./dist/example
+        run: ./dist/bun-example
   deno:
     timeout-minutes: 10
     permissions:
